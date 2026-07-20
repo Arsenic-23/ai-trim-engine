@@ -1,0 +1,27 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 1,
+      "issue": "Leftover matching content found in kept ranges: [0.0s–11.8s]; [12.2s–13.1s]",
+      "leftover_segments": [
+        "[0.0s–11.8s]",
+        "[12.2s–13.1s]",
+        "[13.9s–14.6s]",
+        "[17.2s–18.2s]",
+        "[20.7s–21.9s]",
+        "[28.2s–28.8s]",
+        "[33.3s–34.4s]",
+        "[35.2s–36.2s]",
+        "[41.6s–42.4s]",
+        "[44.2s–44.8s]",
+        "[45.4s–46.3s]",
+        "[64.2s–65.8s]",
+        "[66.5s–80.8s]"
+      ],
+      "route": "retrieval"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "The single removal at 63.5s–64.0s correctly excises a filler sound mid-sentence between 'Why are balloons' and 'expensive? Inflation', satisfying Op 0. The remaining speech is a professionally delivered, fast-paced TEDx talk with no detectable long pauses or dead air remaining in the kept transcript, consistent with Op 1 being satisfied at the 0.7% removal ratio. Op 2 is soft; the one plausible restart ('I Don't I care') is borderline performance-style delivery rather than a genuine stumble, and its retention is acceptable under the soft constraint. The joke setup and punchline are fully intact, the narrative arc from hook through payoff to outro is coherent, and there are no orphaned references or broken context in the final sequence."
+}

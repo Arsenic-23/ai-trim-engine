@@ -1,0 +1,75 @@
+{
+  "intent_id": "7f3a2c1e-84b5-4d9f-a6e3-2b1c5d8e9f04",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "visual"
+        ],
+        "query": "all walking shots — any segment where a person is visibly walking",
+        "graph_pattern": "visual_event(walking)",
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.62
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and sounds (um, uh, like, you know, etc.)",
+        "graph_pattern": "filler_event(person:B)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "stylize",
+      "target": {
+        "modality": [
+          "visual",
+          "audio"
+        ],
+        "query": "fast-paced cuts and tight editing throughout",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "No walking shots are explicitly identified in the video summary or scene analysis. This is a TEDx stage talk; walking motion may exist (e.g., presenter moving across the stage) but has not been confirmed as a distinct labeled event in the coverage data. The retrieval engine will attempt to locate walking segments via visual analysis, but results may be limited or absent.",
+      "candidates": [
+        "person:B (Woody Roseland) walking on theater_stage",
+        "audience members walking in auditorium"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

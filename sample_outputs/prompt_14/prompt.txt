@@ -1,0 +1,1 @@
+Remove every shot where Person B appears.

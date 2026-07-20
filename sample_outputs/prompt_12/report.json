@@ -1,0 +1,19 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 12,
+  "prompt": "Remove everything before I enter the frame.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [],
+  "continuity_warnings": [
+    "No removals were requested and no content was removed. The kept transcript contains the full video in chronological order. Intent is fully satisfied."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "critic_verdict_summary": "PASS",
+  "cost_usd": 1.4706732
+}

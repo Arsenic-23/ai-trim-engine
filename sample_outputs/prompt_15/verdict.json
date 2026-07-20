@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "The 'keep_only owner speaking' intent was not satisfied. The plan kept the entire 80.8s video with a removal ratio of 0.1%, retaining segments where the owner is demonstrably NOT speaking. Specifically: (1) the TEDx MileHigh branded title card and theater audience reveal intro sequence contains no owner speech; (2) two wide audience reaction/applause shots show the crowd with no owner speech; (3) the closing TEDx MileHigh title card and production credits outro contains no owner speech. All of these segments appear in the kept transcript per the visual scene descriptions.",
+      "leftover_segments": [
+        "[0.0s–80.8s] VISUAL SCENE: The video opens with a black screen that dissolves into a vibrant yellow TEDx MileHigh 'Point of Departure' title card — branded intro with no owner speech",
+        "[0.0s–80.8s] VISUAL SCENE: A wide shot of a large theater audience seated in red seats — audience reveal with no owner speech",
+        "[0.0s–80.8s] VISUAL SCENE: A wide audience reaction shot showing hundreds of TEDx MileHigh attendees applauding — audience cutaway with no owner speech",
+        "[0.0s–80.8s] VISUAL SCENE: A continued wide audience shot, the crowd applauding energetically — second audience cutaway with no owner speech",
+        "[0.0s–80.8s] VISUAL SCENE: The closing title card sequence for TEDx MileHigh animates through bold yellow branding graphics before transitioning to a black-and-olive end card — outro with no owner speech"
+      ],
+      "route": "story"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "The owner's speech content itself is fully present and coherent. The failure is that non-owner-speaking segments (branded intro, audience reaction shots, and branded outro) were not removed despite the hard keep_only intent. The Story Agent should re-evaluate which scene windows contain owner speech versus audience or graphic-only content and mark the non-speech segments for removal."
+}

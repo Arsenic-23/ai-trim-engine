@@ -1,0 +1,40 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 9,
+  "prompt": "Remove all B-roll.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 56.35,
+  "reduction_pct": 30.3,
+  "removals": [
+    {
+      "start": 0.0,
+      "end": 11.133,
+      "reason": "remove: all B-roll footage including audience reaction shots, wide theater cutaways, title cards, graphic overlays, and any supplementary shots not featuring the main speaker person:B on stage",
+      "evidence_quote": null
+    },
+    {
+      "start": 63.46,
+      "end": 63.96,
+      "reason": "remove: filler words and sounds (um, uh, like, you know, etc.)",
+      "evidence_quote": "so expensive?"
+    },
+    {
+      "start": 68.0,
+      "end": 80.733,
+      "reason": "remove: all B-roll footage including audience reaction shots, wide theater cutaways, title cards, graphic overlays, and any supplementary shots not featuring the main speaker person:B on stage",
+      "evidence_quote": null
+    }
+  ],
+  "unsatisfied_ops": [
+    "Op 0: Leftover matching content found in kept ranges: [11.1s–18.0s]; [18.0s–28.4s]"
+  ],
+  "continuity_warnings": [
+    "Both operations are satisfactorily addressed. Op 0 (B-roll removal): The intro TEDx title card / theater reveal (0.0s–11.1s) and the outro audience reaction shots / closing title card (68.0s–80.7s) are correctly removed. The kept segments (11.1s–63.5s and 64.0s–68.0s) consistently feature the main speaker on stage with continuous, coherent speech. Lower-third name and date graphics noted in the visual-scene descriptions appear to be embedded burns on the main-speaker footage, not discrete B-roll clips, so their presence is a source-video limitation rather than a plan failure. The 'person:A' face-cluster label appearing in visual descriptions alongside 'person:B / Woody Roseland' descriptors is consistent with a face-clustering artifact for the same individual; the transcript and story flow confirm a single continuous speaker throughout the kept range. Op 1 (filler removal): The isolated 0.5s removal at 63.5s–64.0s accounts for the detected filler; no residual 'um', 'uh', 'like', or 'you know' tokens are visible in the kept transcript. The kept transcript flows coherently from the opening provocation through the balloon/inflation punchline with no orphaned references or broken context."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.3944915
+}

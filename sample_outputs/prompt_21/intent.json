@@ -1,0 +1,73 @@
+{
+  "intent_id": "b7e4c2a1-9f3d-4b08-a562-1d6e830f5c29",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "story"
+        ],
+        "query": "sponsor mentions, sponsorship segments, or advertisement reads",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.65
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and verbal hesitations",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "stylize",
+      "target": {
+        "modality": [
+          "audio",
+          "visual"
+        ],
+        "query": "fast paced cuts and tight pacing",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "No sponsor mentions or advertisement segments were detected in the video summary. The video appears to be a TEDx talk with no sponsorship topics listed. The removal operation will be attempted, but the retrieval engine may find no matching segments to cut.",
+      "candidates": [],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

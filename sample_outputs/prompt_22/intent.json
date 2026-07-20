@@ -1,0 +1,58 @@
+{
+  "intent_id": "f4a2c8d1-3b7e-4f9a-a6c2-8d5e1f0b3c7a",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "speech",
+          "topic"
+        ],
+        "query": "segments containing spoken questions",
+        "graph_pattern": "speech_act(utterance, question)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.82
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech"
+        ],
+        "query": "filler words and sounds (uh, um, like, you know)",
+        "graph_pattern": "is_filler(utterance)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The video appears to be a solo comedy TED-style monologue (Woody Roseland performing on stage) with no Q&A section indicated in the story structure or topic summary. It is unclear whether any spoken questions exist in the transcript. The keep_only operation will be attempted, but the result may be very short or empty.",
+      "candidates": [],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

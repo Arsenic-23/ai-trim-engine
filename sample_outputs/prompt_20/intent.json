@@ -1,0 +1,62 @@
+{
+  "intent_id": "a3f7c2d1-84b0-4e6a-b912-7d3c5f810e29",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "visual"
+        ],
+        "query": "close-up reaction shots of audience or persons showing emotional responses",
+        "graph_pattern": "shot_type(close_up) AND scene_type(reaction)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.82
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and verbal hesitations",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": false
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The video summary describes the primary reaction moment as a 'wide audience reaction shot' in the payoff beat. No explicitly labelled close-up reaction shots are confirmed in the summary. The retrieval engine will attempt to identify close-up framed shots containing reaction expressions, but the yield may be low (potentially only a few seconds of usable footage).",
+      "candidates": [
+        "payoff beat: wide audience applause/laughter shot",
+        "person:A: unidentified face cluster — may include close-up frames",
+        "person:B: Woody Roseland (speaker) — facial reaction moments during performance"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "always_remove_fillers",
+    "pacing_fast"
+  ],
+  "out_of_scope_reason": null
+}

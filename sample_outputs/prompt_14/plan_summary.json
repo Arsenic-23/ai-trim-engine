@@ -1,0 +1,28 @@
+{
+  "plan_id": "4f44c7cd",
+  "operations": [
+    {
+      "op_id": "op_0",
+      "type": "delete",
+      "range_start": 11.133,
+      "range_end": 68.0,
+      "reason": "remove: every shot where person:B appears; remove: filler words and verbal fillers; remove: filler words and verbal fillers",
+      "evidence_ref": "person:B appears",
+      "repairs": [
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    }
+  ],
+  "predicted_output_duration_s": 23.86,
+  "removal_ratio": 0.7048,
+  "clip_count": 2,
+  "rule_logs": []
+}

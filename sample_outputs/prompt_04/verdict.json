@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "coherence_ok": true,
+  "notes": "The soft 'compress important moments' intent is satisfied. The plan removes approximately 26% of the video, retaining all key story beats: the hook (provocative opening), setup (attention spans are dead), development (TED talk length joke setup), climax (balloon/inflation punchline), and payoff (audience reaction). The removed segments (21.3s–28.5s, 44.5s–51.2s, 54.5s–61.3s, 80.7s–80.8s) appear to be filler or transitional content between the major comedic beats. The kept transcript reads coherently in chronological order with no orphaned references or broken context."
+}

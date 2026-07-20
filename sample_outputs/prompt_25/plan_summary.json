@@ -1,0 +1,82 @@
+{
+  "plan_id": "6cd2ed2f",
+  "operations": [
+    {
+      "op_id": "op_0",
+      "type": "delete",
+      "range_start": 44.5,
+      "range_end": 51.22,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_ref": null,
+      "repairs": [
+        {
+          "type": "snap_to_silence",
+          "detail": "moved 44.267→44.500 (silence midpoint)"
+        },
+        {
+          "type": "snap_to_word_edge",
+          "detail": "moved 51.334→51.220 (word edge)"
+        },
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    },
+    {
+      "op_id": "op_1",
+      "type": "delete",
+      "range_start": 54.5,
+      "range_end": 61.3,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_ref": null,
+      "repairs": [
+        {
+          "type": "snap_to_silence",
+          "detail": "moved 54.334→54.500 (silence midpoint)"
+        },
+        {
+          "type": "snap_to_silence",
+          "detail": "moved 61.400→61.300 (silence midpoint)"
+        },
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    },
+    {
+      "op_id": "op_2",
+      "type": "delete",
+      "range_start": 74.367,
+      "range_end": 80.805442,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_ref": null,
+      "repairs": [
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    }
+  ],
+  "predicted_output_duration_s": 60.98,
+  "removal_ratio": 0.2454,
+  "clip_count": 3,
+  "rule_logs": []
+}

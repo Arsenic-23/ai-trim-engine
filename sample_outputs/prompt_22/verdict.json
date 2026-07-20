@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Op 0 is a hard keep_only directive for 'segments containing spoken questions.' The entire video (0.0s–80.8s) was retained at a 0.1% removal ratio. Reviewing the kept transcript, the only identifiable spoken question is 'Why are balloons so expensive?' (the balloon joke setup near the end). All other content — the opening provocation, the Facebook/internet commentary, the attention span declaration, the TED talk length bit — contains no spoken questions and should have been removed. The keep_only rule was effectively not applied.",
+      "leftover_segments": [
+        "[0.0s–80.8s] Wow What an audience, but if I'm being honest, I don't care what you think of my talk.",
+        "[0.0s–80.8s] I Don't I care what the internet thinks of my talk Because they're the ones who get it seen and get it shared...",
+        "[0.0s–80.8s] They're talking to you here instead of talking to you random person scrolling Facebook Thanks for the click",
+        "[0.0s–80.8s] You see back in 2009. We all have these weird little things called attention spans Yeah, they're gone. They're gone. We killed him. They're dead",
+        "[0.0s–80.8s] I'm trying to think of the last time I watched an 18-minute TED talk. It's been years literally years",
+        "[0.0s–80.8s] So if you're given a TED talk, keep it quick. I'm doing mine in under a minute I'm at 44 seconds right now. That means we got time for one final joke."
+      ],
+      "route": "story"
+    }
+  ],
+  "coherence_ok": false,
+  "notes": "The keep_only operation was ignored entirely, resulting in the full video being preserved. Only the segment containing the spoken question 'Why are balloons so expensive?' should remain. Op 1 (filler removal) cannot be properly evaluated because Op 0 was never executed — re-run from the story stage so the keep_only selection is applied first before filler removal is assessed on the surviving clips."
+}

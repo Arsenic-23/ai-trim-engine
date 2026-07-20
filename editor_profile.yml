@@ -1,0 +1,24 @@
+# Editor Profile — standing preferences that merge with every edit prompt.
+# Place at: ~/.trim_engine/profile.yml or editor_profile.yml in project root.
+#
+# Explicit prompt instructions ALWAYS override these preferences.
+# Only unspecified slots are filled from the profile.
+
+# Default pacing style: fast | medium | slow | cinematic
+pacing: medium
+
+# Default target platforms
+platforms: []
+
+# How long a pause can be before it's removed (seconds)
+pause_tolerance_s: 1.2
+
+# Standing instructions — always applied unless overridden
+always:
+  # - "remove filler words"
+  # - "remove silences longer than 1.5s"
+
+# Things to never do — hard blockers
+never:
+  # - "remove music sections"
+  # - "cut during applause"

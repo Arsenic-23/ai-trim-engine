@@ -1,0 +1,23 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 13,
+  "prompt": "Keep only outdoor scenes.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [
+    "Op 0: Op 0 is a hard keep_only 'outdoor scenes' directive. The video context explicitly lists all locations as auditorium, graphic_overlay, theater_stage, theater, and title_card — every scene is indoors. The edit plan kept the entire video (0.0s–80.8s) unchanged, retaining 100% indoor content. If no outdoor scenes exist, the correct output is an effectively empty or near-empty timeline, not the full original clip. The plan entirely failed to act on this hard constraint.",
+    "Op 1: Op 1 is a hard remove 'filler words and hesitations' directive. The removal ratio is only 0.1%, meaning virtually nothing was cut. The kept transcript contains 'Wow' as an opening exclamation and the VAD/fillers analysis is listed as available, indicating detectable filler content exists. No filler removals appear in the REMOVALS list, demonstrating the constraint was not actioned."
+  ],
+  "continuity_warnings": [
+    "Potential coherence issues detected in kept content",
+    "Both hard operations were left unexecuted. Op 0's keep_only constraint for outdoor scenes was violated by retaining the entire indoor video. Op 1's filler removal was effectively skipped with only 0.1% removal ratio. The plan requires a full re-evaluation by the Story Agent: it must identify that no outdoor scenes exist (resulting in a minimal or empty edit for Op 0) and separately apply filler word cuts per Op 1."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "critic_verdict_summary": "FAIL: 2 issues",
+  "cost_usd": 1.5411573
+}

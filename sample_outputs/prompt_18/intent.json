@@ -1,0 +1,75 @@
+{
+  "intent_id": "a3f7c2e1-84b0-4d19-9c6e-5f21d08b3a7e",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "audio",
+          "visual"
+        ],
+        "query": "moments where audience members are clapping or applauding",
+        "graph_pattern": "audio_event(clapping) OR visual_event(applause)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.75
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech"
+        ],
+        "query": "filler words and sounds (um, uh, like, you know)",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "stylize",
+      "target": {
+        "modality": [
+          "visual",
+          "audio"
+        ],
+        "query": "fast paced cuts",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": false
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "Audio event detection for clapping is marked as 'heuristic' in this video's analysis coverage, meaning clapping moments may not be precisely identified. The payoff beat ('Wide audience reaction shots show the crowd applauding and laughing') is the most likely clapping segment, but other clapping moments may exist elsewhere in the timeline.",
+      "candidates": [
+        "story beat: payoff — confirmed audience applause and laughter",
+        "any other scene with heuristic-detected clapping audio events"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "out_of_scope_reason": null
+}

@@ -1,0 +1,38 @@
+{
+  "intent_id": "fast_67e6c8f0",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "audio"
+        ],
+        "query": "silence",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": null
+  },
+  "ambiguities": [],
+  "profile_applied": [
+    "default_silence",
+    "profile_pacing"
+  ],
+  "out_of_scope_reason": null
+}

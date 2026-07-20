@@ -1,0 +1,57 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 2,
+  "prompt": "Make this under 30 seconds.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 31.57,
+  "reduction_pct": 60.9,
+  "removals": [
+    {
+      "start": 0.0,
+      "end": 8.467,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": null
+    },
+    {
+      "start": 14.25,
+      "end": 28.5,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": "but if I'm being honest, I don't care what you think of my talk. I Don't I care what the..."
+    },
+    {
+      "start": 31.7,
+      "end": 35.7,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": "scrolling Facebook Thanks for the click"
+    },
+    {
+      "start": 44.5,
+      "end": 51.22,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": "They're dead I'm trying to think of the last time I watched an 18-minute TED talk. It's been years literally"
+    },
+    {
+      "start": 54.5,
+      "end": 61.3,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": "keep it quick. I'm doing mine in under a minute I'm at 44 seconds right now. That means we got..."
+    },
+    {
+      "start": 71.367,
+      "end": 80.805442,
+      "reason": "keep_only: not matching 'important moments'",
+      "evidence_quote": null
+    }
+  ],
+  "unsatisfied_ops": [
+    "Op 0: Output duration (31.6s) exceeds maximum target limit (30.0s)"
+  ],
+  "continuity_warnings": [
+    "The plan satisfies the compress 'important moments' intent by retaining the key narrative beats: the opening hook ('Wow what an audience'), the attention span declaration, the TED talk setup, and the balloon/inflation punchline with audience reaction. Removed segments are contextual filler, intro title cards, and transitional material that do not constitute important moments. The kept sequence flows coherently from hook → setup → development → climax → payoff, preserving the comedic throughline and narrative arc. No orphaned references or broken context detected."
+  ],
+  "profile_preferences_applied": [
+    "duration_compress"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.1622567
+}

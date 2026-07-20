@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "coherence_ok": true,
+  "notes": "Op 0 (remove pricing mentions): No pricing content is present in the transcript — the talk covers attention spans, TED talk length, and a balloon/inflation joke. No removal was needed and none was incorrectly applied. Op 1 (remove filler words/sounds): The removal at 63.5s–64.0s correctly excises a filler sound segment. The kept transcript flows coherently from the setup ('Why are balloons') directly into the punchline ('expensive? Inflation'), preserving the joke structure. No orphaned references or broken context detected."
+}

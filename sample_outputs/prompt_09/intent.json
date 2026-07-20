@@ -1,0 +1,59 @@
+{
+  "intent_id": "e7f3a2c1-84d6-4b19-9e05-d1c72f3a6b08",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "visual",
+          "story"
+        ],
+        "query": "all B-roll footage including audience reaction shots, wide theater cutaways, title cards, graphic overlays, and any supplementary shots not featuring the main speaker person:B on stage",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and sounds (um, uh, like, you know, etc.)",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The scope of 'B-roll' in this video may include the intro title card, outro credits, audience reaction shots at the payoff beat, and graphic overlays — all of which carry some narrative or contextual value (e.g., the payoff audience laughter confirms the comedic resolution). Removing them will preserve only person:B's on-stage A-roll but may reduce the perceived comedic impact of the climax. Proceeding with full B-roll removal as instructed.",
+      "candidates": [],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "out_of_scope_reason": null
+}

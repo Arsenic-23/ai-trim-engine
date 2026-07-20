@@ -1,0 +1,22 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 18,
+  "prompt": "Keep moments where people are clapping.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [
+    "Op 0: Op 0 is a hard 'keep_only' directive requiring that only moments where audience members are clapping or applauding are retained. The edit plan kept virtually the entire source video (80.7s of 80.8s, a 0.1% removal ratio, single clip spanning 0.0s–80.8s). This includes the full TEDx talk speech, branded intro/outro title cards, and all non-applause content. Only two visual scenes in the source describe audience applause, yet none of the non-applause content was removed. The keep_only constraint was not applied at all."
+  ],
+  "continuity_warnings": [
+    "Potential coherence issues detected in kept content",
+    "The plan entirely failed to apply the hard keep_only constraint for audience applause moments. The story agent should have isolated only the applause reaction shots (the two wide audience reaction scenes) and discarded all other content. Op 1 (filler removal) cannot be meaningfully evaluated given that the primary selection constraint was ignored. Op 2 is soft and non-blocking."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.833021
+}

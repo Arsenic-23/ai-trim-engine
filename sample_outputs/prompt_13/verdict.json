@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Op 0 is a hard keep_only 'outdoor scenes' directive. The video context explicitly lists all locations as auditorium, graphic_overlay, theater_stage, theater, and title_card — every scene is indoors. The edit plan kept the entire video (0.0s–80.8s) unchanged, retaining 100% indoor content. If no outdoor scenes exist, the correct output is an effectively empty or near-empty timeline, not the full original clip. The plan entirely failed to act on this hard constraint.",
+      "leftover_segments": [
+        "[0.0s–80.8s] TEDx title card (indoor/graphic)",
+        "[0.0s–80.8s] Theater audience wide shot (auditorium — indoor)",
+        "[0.0s–80.8s] Woody Roseland on TEDx stage (theater_stage — indoor)",
+        "[0.0s–80.8s] All remaining stage and audience scenes (indoor)"
+      ],
+      "route": "story"
+    },
+    {
+      "operation_index": 1,
+      "issue": "Op 1 is a hard remove 'filler words and hesitations' directive. The removal ratio is only 0.1%, meaning virtually nothing was cut. The kept transcript contains 'Wow' as an opening exclamation and the VAD/fillers analysis is listed as available, indicating detectable filler content exists. No filler removals appear in the REMOVALS list, demonstrating the constraint was not actioned.",
+      "leftover_segments": [
+        "[0.0s–80.8s] 'Wow What an audience' — 'Wow' is a filler/exclamation that should have been removed"
+      ],
+      "route": "story"
+    }
+  ],
+  "coherence_ok": false,
+  "notes": "Both hard operations were left unexecuted. Op 0's keep_only constraint for outdoor scenes was violated by retaining the entire indoor video. Op 1's filler removal was effectively skipped with only 0.1% removal ratio. The plan requires a full re-evaluation by the Story Agent: it must identify that no outdoor scenes exist (resulting in a minimal or empty edit for Op 0) and separately apply filler word cuts per Op 1."
+}

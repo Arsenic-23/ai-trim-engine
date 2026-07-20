@@ -1,0 +1,87 @@
+[project]
+name = "ai-trim-engine"
+version = "0.1.0"
+description = "Personalized AI Trim Engine — natural-language video editing via intent compilation, retrieval, and deterministic rendering"
+readme = "README.md"
+requires-python = "==3.12.*"
+license = { text = "MIT" }
+
+dependencies = [
+    # LLM — Claude Sonnet 4.6 via AWS Bedrock (GA: AnthropicBedrockMantle)
+    "anthropic[bedrock]>=0.52.0",
+    "boto3>=1.35.0",
+    # ASR — word-level timestamps (ctranslate2 pinned for ARM64)
+    "faster-whisper==1.1.0",
+    "ctranslate2==4.4.0",
+    # Scene detection
+    "scenedetect[opencv]>=0.6.5",
+    # Visual embeddings (CLIP ViT-B/32) — pinned for ARM64 compatibility
+    "open-clip-torch>=2.26.1",
+    "torch>=2.4.0",
+    "torchvision>=0.19.0",
+    # Text embeddings (MiniLM)
+    "sentence-transformers>=3.4.0",
+    # Vector index
+    "faiss-cpu>=1.9.0",
+    # Keyword index
+    "rank-bm25>=0.2.2",
+    # FFmpeg render layer
+    "ffmpeg-python>=0.2.0",
+    # Schemas, API, CLI
+    "pydantic>=2.10.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+    "typer>=0.15.0",
+    "rich>=13.9.0",
+    "pyyaml>=6.0.2",
+    # VAD
+    "silero-vad>=5.1.2",
+    # Audio analysis (lazy-imported for beat detection)
+    "librosa>=0.10.2",
+    # ML utilities
+    "scikit-learn>=1.6.0",
+    "scipy>=1.14.0",
+    "numpy>=1.26.0",
+    "demucs>=4.0.0",
+    # Face detection & recognition — DEFERRED (optional, VLM roster covers identity)
+    # "insightface>=0.7.3",
+    "pandas>=3.0.3",
+    "torchaudio>=2.4.0",
+    "torchcodec>=0.1.0",
+    "prompt-toolkit>=3.0.52",
+    "pyarrow>=25.0.0",
+    "mediapipe>=0.10.35",
+    "demucs>=4.0.1",
+    "intervaltree>=3.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-snapshot>=0.9.0",
+    "ruff>=0.8.0",
+]
+
+[project.scripts]
+craon = "trim_engine.cli:app"
+trim = "trim_engine.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.hatch.build.targets.wheel]
+packages = ["trim_engine"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"prompts" = "prompts"
+
+[tool.pytest.ini_options]
+markers = [
+    "llm: tests that make LLM API calls (deselect with -m 'not llm')",
+    "slow: tests that take >10s (deselect with -m 'not slow')",
+]

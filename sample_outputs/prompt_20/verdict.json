@@ -1,0 +1,18 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Op 0 is a hard 'keep_only' instruction requiring only close-up reaction shots of audience or persons showing emotional responses. Instead, the entire video (0.0s–80.8s) was retained, including: branded title cards, the speaker's full monologue, wide audience shots (not close-ups), and production outro graphics. None of the retained content qualifies as a close-up reaction shot. The only audience reaction content visible in the scene descriptions is a pair of wide auditorium shots (rows of seated attendees applauding), which are explicitly wide shots — not close-up reaction shots. All non-reaction content should have been removed.",
+      "leftover_segments": [
+        "[0.0s–80.8s] TEDx MileHigh branded title card intro sequence",
+        "[0.0s–80.8s] Woody Roseland full speaker monologue on stage",
+        "[0.0s–80.8s] Wide audience shots (not close-up)",
+        "[0.0s–80.8s] TEDx MileHigh closing title card and production credits"
+      ],
+      "route": "story"
+    }
+  ],
+  "coherence_ok": false,
+  "notes": "The keep_only operation was entirely unapplied — the full source video was passed through unchanged at a 0.1% removal ratio. The story agent must filter the timeline to retain only segments containing close-up reaction shots of audience members or other persons displaying visible emotional responses. If no such close-up reaction shots exist in the source material, that should be surfaced as a null-result rather than defaulting to keeping everything."
+}

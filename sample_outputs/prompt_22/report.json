@@ -1,0 +1,22 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 22,
+  "prompt": "Keep only questions.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [
+    "Op 0: Op 0 is a hard keep_only directive for 'segments containing spoken questions.' The entire video (0.0s–80.8s) was retained at a 0.1% removal ratio. Reviewing the kept transcript, the only identifiable spoken question is 'Why are balloons so expensive?' (the balloon joke setup near the end). All other content — the opening provocation, the Facebook/internet commentary, the attention span declaration, the TED talk length bit — contains no spoken questions and should have been removed. The keep_only rule was effectively not applied."
+  ],
+  "continuity_warnings": [
+    "Potential coherence issues detected in kept content",
+    "The keep_only operation was ignored entirely, resulting in the full video being preserved. Only the segment containing the spoken question 'Why are balloons so expensive?' should remain. Op 1 (filler removal) cannot be properly evaluated because Op 0 was never executed — re-run from the story stage so the keep_only selection is applied first before filler removal is assessed on the surviving clips."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 2.055189
+}

@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Leftover matching content found in kept ranges: [11.1s–18.0s]; [18.0s–28.4s]",
+      "leftover_segments": [
+        "[11.1s–18.0s]",
+        "[18.0s–28.4s]",
+        "[28.4s–35.9s]",
+        "[35.9s–40.3s]",
+        "[40.3s–44.3s]",
+        "[44.3s–61.4s]",
+        "[61.4s–68.0s]",
+        "[61.4s–68.0s]"
+      ],
+      "route": "retrieval"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "Both operations are satisfactorily addressed. Op 0 (B-roll removal): The intro TEDx title card / theater reveal (0.0s–11.1s) and the outro audience reaction shots / closing title card (68.0s–80.7s) are correctly removed. The kept segments (11.1s–63.5s and 64.0s–68.0s) consistently feature the main speaker on stage with continuous, coherent speech. Lower-third name and date graphics noted in the visual-scene descriptions appear to be embedded burns on the main-speaker footage, not discrete B-roll clips, so their presence is a source-video limitation rather than a plan failure. The 'person:A' face-cluster label appearing in visual descriptions alongside 'person:B / Woody Roseland' descriptors is consistent with a face-clustering artifact for the same individual; the transcript and story flow confirm a single continuous speaker throughout the kept range. Op 1 (filler removal): The isolated 0.5s removal at 63.5s–64.0s accounts for the detected filler; no residual 'um', 'uh', 'like', or 'you know' tokens are visible in the kept transcript. The kept transcript flows coherently from the opening provocation through the balloon/inflation punchline with no orphaned references or broken context."
+}

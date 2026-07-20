@@ -1,0 +1,42 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 25,
+  "prompt": "Make it suitable for TikTok.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 60.98,
+  "reduction_pct": 24.5,
+  "removals": [
+    {
+      "start": 44.5,
+      "end": 51.22,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_quote": "They're dead I'm trying to think of the last time I watched an 18-minute TED talk. It's been years literally"
+    },
+    {
+      "start": 54.5,
+      "end": 61.3,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_quote": "keep it quick. I'm doing mine in under a minute I'm at 44 seconds right now. That means we got..."
+    },
+    {
+      "start": 74.367,
+      "end": 80.805442,
+      "reason": "keep_only: not matching 'short-form highlights'",
+      "evidence_quote": null
+    }
+  ],
+  "unsatisfied_ops": [
+    "Op 0: The cut at 44.5s–51.2s creates an orphaned sentence fragment: the kept segment at [51.2s–54.5s] begins mid-sentence with 'literally years So if you're given a TED talk,' — the word 'literally years' is the tail end of a sentence whose beginning was removed. This results in an incoherent mid-sentence entry point.",
+    "Op 0: The cut at 54.5s–61.3s creates a second orphaned sentence fragment: the kept segment at [61.3s–74.4s] begins with 'joke.' which is clearly the end of a sentence whose body was excised in the 54.5s–61.3s removal. The punchline 'Why are balloons so expensive? Inflation' lands but is preceded by a dangling word fragment that breaks spoken coherence.",
+    "Op 0: Output duration (61.0s) exceeds maximum target limit (60.0s)"
+  ],
+  "continuity_warnings": [
+    "Potential coherence issues detected in kept content",
+    "The overall segment selection and story structure (hook → setup → punchline → payoff) is sound and the removal ratio is plausible for a hard compress of short-form highlights. However, both interior cut points land mid-sentence, leaving dangling fragments ('literally years' and 'joke.') that break spoken coherence. The planner needs to snap these cut boundaries to the nearest clean sentence boundary — either extending each kept segment slightly to include the full sentence, or trimming the orphaned word(s) from the segment start."
+  ],
+  "profile_preferences_applied": [
+    "tiktok_template"
+  ],
+  "critic_verdict_summary": "FAIL: 3 issues",
+  "cost_usd": 2.1684435
+}

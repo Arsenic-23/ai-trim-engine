@@ -1,0 +1,39 @@
+{
+  "intent_id": "fast_cf4a8b57",
+  "operations": [
+    {
+      "action": "compress",
+      "target": {
+        "modality": [
+          "story",
+          "speech",
+          "visual"
+        ],
+        "query": "important moments",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": 56.5638094,
+    "duration_mode": "approx",
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": null
+  },
+  "ambiguities": [],
+  "profile_applied": [
+    "fast_compress"
+  ],
+  "out_of_scope_reason": null
+}

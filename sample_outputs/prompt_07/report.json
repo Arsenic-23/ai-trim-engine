@@ -1,0 +1,19 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 7,
+  "prompt": "Remove retakes and mistakes; keep only the final take.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [],
+  "continuity_warnings": [
+    "The analysis coverage explicitly reports 'retakes: unavailable', meaning the retake detection pipeline had no data to surface for removal. The kept transcript is a continuous, coherent 80.8s TEDx talk with no observable retake artifacts — the speech flows uninterrupted from opening provocation through setup, punchline, audience reaction, and outro. There is no evidence in the transcript or visual scene descriptions of any false start, repeated line, or on-camera correction that a retake detector would typically flag. The plan correctly produces zero removals under these data conditions. No intent violations, orphaned references, or broken context were found."
+  ],
+  "profile_preferences_applied": [
+    "default_retakes",
+    "profile_pacing"
+  ],
+  "critic_verdict_summary": "PASS",
+  "cost_usd": 1.2467493
+}

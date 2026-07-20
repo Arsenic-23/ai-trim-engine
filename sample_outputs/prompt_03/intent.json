@@ -1,0 +1,61 @@
+{
+  "intent_id": "a3f7c821-9d14-4e58-b062-d1f8e20349c7",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "visual",
+          "audio"
+        ],
+        "query": "segments where the owner/speaker is laughing",
+        "graph_pattern": "audio_event(laughing) AND face_expression(laughing)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.72
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech"
+        ],
+        "query": "filler words and sounds",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The prompt uses 'I' to refer to the owner, but no person in the video summary has 'is_owner' set to true. Cannot definitively resolve 'I' to a specific person. Defaulting the remove operation to the most likely candidate (person:B — the on-stage speaker, Woody Roseland), but please confirm.",
+      "candidates": [
+        "person:B (man, 30s-40s, bald, blue blazer — on-stage speaker, likely the video owner)",
+        "person:A (Face cluster person:A — identity unconfirmed)"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "out_of_scope_reason": null
+}

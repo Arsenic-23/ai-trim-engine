@@ -1,0 +1,75 @@
+{
+  "intent_id": "c7e2a914-3f8b-4d61-a05e-91b6f0d2e847",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech"
+        ],
+        "query": "filler words and filler sounds (uh, um, like, you know, etc.)",
+        "graph_pattern": "filler_event(person:B)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "audio"
+        ],
+        "query": "long pauses, silence, and dead air between speech segments",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "visual"
+        ],
+        "query": "low-confidence, hesitant, or awkward delivery moments — stumbles, restarts, or low-energy speech",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.65
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The definition of 'awkward moments' is subjective. This intent targets fillers, long silences, and hesitant delivery as the most common objective signals. If you meant something more specific (e.g., audience reaction shots, specific segments), please clarify.",
+      "candidates": [
+        "Filler words and sounds (uh, um, like)",
+        "Long silences and dead air",
+        "Hesitant or stumbled speech delivery"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

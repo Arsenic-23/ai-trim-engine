@@ -1,0 +1,39 @@
+{
+  "intent_id": "fast_8b37b93e",
+  "operations": [
+    {
+      "action": "compress",
+      "target": {
+        "modality": [
+          "story",
+          "speech",
+          "visual"
+        ],
+        "query": "short-form highlights",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": 60.0,
+    "duration_mode": "max",
+    "platform": "tiktok",
+    "aspect_ratio": "9:16",
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": "hook_first",
+    "ordering": null
+  },
+  "ambiguities": [],
+  "profile_applied": [
+    "tiktok_template"
+  ],
+  "out_of_scope_reason": null
+}

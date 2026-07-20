@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "The cut at 44.5s–51.2s creates an orphaned sentence fragment: the kept segment at [51.2s–54.5s] begins mid-sentence with 'literally years So if you're given a TED talk,' — the word 'literally years' is the tail end of a sentence whose beginning was removed. This results in an incoherent mid-sentence entry point.",
+      "leftover_segments": [
+        "[51.2s–54.5s] literally years So if you're given a TED talk,"
+      ],
+      "route": "planner"
+    },
+    {
+      "operation_index": 0,
+      "issue": "The cut at 54.5s–61.3s creates a second orphaned sentence fragment: the kept segment at [61.3s–74.4s] begins with 'joke.' which is clearly the end of a sentence whose body was excised in the 54.5s–61.3s removal. The punchline 'Why are balloons so expensive? Inflation' lands but is preceded by a dangling word fragment that breaks spoken coherence.",
+      "leftover_segments": [
+        "[61.3s–74.4s] joke. Why are balloons so expensive? Inflation"
+      ],
+      "route": "planner"
+    },
+    {
+      "operation_index": 0,
+      "issue": "Output duration (61.0s) exceeds maximum target limit (60.0s)",
+      "leftover_segments": null,
+      "route": "story"
+    }
+  ],
+  "coherence_ok": false,
+  "notes": "The overall segment selection and story structure (hook → setup → punchline → payoff) is sound and the removal ratio is plausible for a hard compress of short-form highlights. However, both interior cut points land mid-sentence, leaving dangling fragments ('literally years' and 'joke.') that break spoken coherence. The planner needs to snap these cut boundaries to the nearest clean sentence boundary — either extending each kept segment slightly to include the full sentence, or trimming the orphaned word(s) from the segment start."
+}

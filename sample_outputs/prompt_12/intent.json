@@ -1,0 +1,33 @@
+{
+  "intent_id": "a3f7c21e-84b0-4d9e-b612-7e503d1f09c8",
+  "operations": [],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The prompt uses 'I' to refer to the video owner, but no person in the video summary has the 'is_owner' flag set to true. It is therefore impossible to determine which person represents the user in the footage. The two detected people are person:A (unidentified face cluster) and person:B (man, 30s–40s, bald, blue blazer, headset microphone — likely the main speaker Woody Roseland based on story context). Please confirm which person key corresponds to you.",
+      "candidates": [
+        "person:A (unidentified face cluster via SCRFD + ArcFace)",
+        "person:B (man, 30s-40s, bald, blue blazer, white dress shirt, headset microphone — likely Woody Roseland, the main speaker)"
+      ],
+      "blocking": true
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

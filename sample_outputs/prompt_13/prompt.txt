@@ -1,0 +1,1 @@
+Keep only outdoor scenes.

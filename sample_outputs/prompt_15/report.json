@@ -1,0 +1,21 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 15,
+  "prompt": "Keep only the shots where I'm speaking.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [
+    "Op 0: The 'keep_only owner speaking' intent was not satisfied. The plan kept the entire 80.8s video with a removal ratio of 0.1%, retaining segments where the owner is demonstrably NOT speaking. Specifically: (1) the TEDx MileHigh branded title card and theater audience reveal intro sequence contains no owner speech; (2) two wide audience reaction/applause shots show the crowd with no owner speech; (3) the closing TEDx MileHigh title card and production credits outro contains no owner speech. All of these segments appear in the kept transcript per the visual scene descriptions."
+  ],
+  "continuity_warnings": [
+    "The owner's speech content itself is fully present and coherent. The failure is that non-owner-speaking segments (branded intro, audience reaction shots, and branded outro) were not removed despite the hard keep_only intent. The Story Agent should re-evaluate which scene windows contain owner speech versus audience or graphic-only content and mark the non-speech segments for removal."
+  ],
+  "profile_preferences_applied": [
+    "owner_focus",
+    "profile_pacing"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.6278345
+}

@@ -1,0 +1,67 @@
+{
+  "intent_id": "f3a7c821-9d4e-4b2e-a1d5-7c8e3f902b41",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "topic"
+        ],
+        "query": "any segment where the speaker mentions pricing",
+        "graph_pattern": "speaks_about(speaker, pricing)",
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.0
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and filler sounds",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "The pronoun 'I' could not be resolved to an owner-flagged person. No person in the video summary has 'is_owner: true'. The video appears to feature Woody Roseland as the primary speaker (person:B), but ownership could not be confirmed.",
+      "candidates": [
+        "person:A (Face cluster, unidentified)",
+        "person:B (man, 30s-40s, bald, blue blazer — likely the TEDx speaker Woody Roseland)"
+      ],
+      "blocking": false
+    },
+    {
+      "issue": "The topic 'pricing' does not appear anywhere in the video summary. The video's topics are: inflation balloon joke, meta-commentary on audience and internet attention, and commentary on declining attention spans and short talks. No pricing-related content was detected. The remove operation has been emitted at soft priority with low confidence, but may produce no cuts.",
+      "candidates": [],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing:fast"
+  ],
+  "out_of_scope_reason": null
+}

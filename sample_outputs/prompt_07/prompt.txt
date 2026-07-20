@@ -1,0 +1,1 @@
+Remove retakes and mistakes; keep only the final take.

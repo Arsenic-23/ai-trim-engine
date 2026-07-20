@@ -1,0 +1,19 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "The intent requires keeping ONLY segments where a product is visibly present. A review of all 12 visual scene descriptions in the kept transcript reveals zero instances of any product being shown — the entire video consists of a speaker on a TEDx stage, audience reaction shots, and branded title cards. Despite this, the plan retained 99.9% of the video (80.7s of 80.8s) with no meaningful removals. The keep_only filter was not applied: non-product-visible content (the entire runtime) should have been cut or flagged as unresolvable.",
+      "leftover_segments": [
+        "[0.0s–80.8s] TEDx branded title card — no product visible",
+        "[0.0s–80.8s] Wide theater audience shot — no product visible",
+        "[0.0s–80.8s] Woody Roseland on stage (multiple scenes) — no product visible",
+        "[0.0s–80.8s] Audience reaction shots — no product visible",
+        "[0.0s–80.8s] Closing title card / credits — no product visible"
+      ],
+      "route": "story"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "The kept transcript is internally coherent as a complete TEDx talk, but the plan entirely failed to execute the hard keep_only 'product visible' operation. No scene in this video contains a visible product. The Story Agent should either identify the closest approximation to 'product' in context (e.g., the speaker as the content product, if that interpretation is valid) and isolate those moments, or surface a no-match result rather than defaulting to keeping the entire video unchanged."
+}

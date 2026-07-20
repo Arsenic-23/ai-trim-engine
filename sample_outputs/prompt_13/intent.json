@@ -1,0 +1,64 @@
+{
+  "intent_id": "a3f8c2d1-7b4e-4f09-83c6-1e5d920bf647",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "visual",
+          "story"
+        ],
+        "query": "outdoor scenes",
+        "graph_pattern": "location_type(scene, outdoor)",
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.55
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech"
+        ],
+        "query": "filler words and hesitations",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "No outdoor scenes were detected in this video. All identified locations are indoors: 'auditorium', 'theater_stage', 'theater', 'graphic_overlay', and 'title_card'. Applying this operation as written would likely result in an empty or near-empty edit.",
+      "candidates": [
+        "auditorium",
+        "theater_stage",
+        "theater",
+        "graphic_overlay",
+        "title_card"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing_fast"
+  ],
+  "out_of_scope_reason": null
+}

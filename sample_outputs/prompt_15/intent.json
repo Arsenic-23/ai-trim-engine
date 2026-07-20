@@ -1,0 +1,75 @@
+{
+  "intent_id": "fast_533429bb",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "person",
+          "speech"
+        ],
+        "query": "owner speaking",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": null
+  },
+  "ambiguities": [
+    {
+      "issue": "Referenced person in query 'owner speaking' was not found in the video.",
+      "candidates": [
+        "stage",
+        "text:videos_produced_directed_by",
+        "logo",
+        "theater_seats",
+        "person:a",
+        "watching",
+        "pointing",
+        "text:x_independently_organized_ted_event",
+        "talking",
+        "title_card",
+        "text:denvercolorado",
+        "applauding",
+        "theater_stage",
+        "text:chris_anthony_entropy_workshop",
+        "transitioning",
+        "text:tedx_milehigh",
+        "theater_seat",
+        "headset_microphone",
+        "text:gh",
+        "text:creative_commons",
+        "text:july2017",
+        "auditorium",
+        "person:b",
+        "text:woodyroseland",
+        "gesturing",
+        "graphic_overlay",
+        "sitting",
+        "theater",
+        "text:point_of_departure"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "owner_focus",
+    "profile_pacing"
+  ],
+  "out_of_scope_reason": null
+}

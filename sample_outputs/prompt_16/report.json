@@ -1,0 +1,21 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 16,
+  "prompt": "Keep only shots with the product visible.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [],
+  "unsatisfied_ops": [
+    "Op 0: The intent requires keeping ONLY segments where a product is visibly present. A review of all 12 visual scene descriptions in the kept transcript reveals zero instances of any product being shown — the entire video consists of a speaker on a TEDx stage, audience reaction shots, and branded title cards. Despite this, the plan retained 99.9% of the video (80.7s of 80.8s) with no meaningful removals. The keep_only filter was not applied: non-product-visible content (the entire runtime) should have been cut or flagged as unresolvable."
+  ],
+  "continuity_warnings": [
+    "The kept transcript is internally coherent as a complete TEDx talk, but the plan entirely failed to execute the hard keep_only 'product visible' operation. No scene in this video contains a visible product. The Story Agent should either identify the closest approximation to 'product' in context (e.g., the speaker as the content product, if that interpretation is valid) and isolate those moments, or surface a no-match result rather than defaulting to keeping the entire video unchanged."
+  ],
+  "profile_preferences_applied": [
+    "product_focus",
+    "profile_pacing"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.6949058
+}

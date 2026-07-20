@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Leftover matching content found in kept ranges: [28.2s–28.8s]; [41.6s–42.4s]",
+      "leftover_segments": [
+        "[28.2s–28.8s]",
+        "[41.6s–42.4s]"
+      ],
+      "route": "retrieval"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "All silence segments have been removed as requested. The kept transcript flows coherently: the talk opens mid-sentence with the provocative hook about not caring what the live audience thinks, transitions to caring about internet viewers, then moves to attention spans being dead, jokes about TED talk length, and ends on the balloon punchline setup. The chronological order is maintained and the narrative through-line is intact."
+}

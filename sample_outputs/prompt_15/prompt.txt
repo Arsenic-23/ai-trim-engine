@@ -1,0 +1,1 @@
+Keep only the shots where I'm speaking.

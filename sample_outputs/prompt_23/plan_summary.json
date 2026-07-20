@@ -1,0 +1,28 @@
+{
+  "plan_id": "6e03489c",
+  "operations": [
+    {
+      "op_id": "op_0",
+      "type": "delete",
+      "range_start": 80.733,
+      "range_end": 80.805442,
+      "reason": "keep_only: not matching 'beat-aligned highlights'",
+      "evidence_ref": null,
+      "repairs": [
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    }
+  ],
+  "predicted_output_duration_s": 80.71,
+  "removal_ratio": 0.0012,
+  "clip_count": 1,
+  "rule_logs": []
+}

@@ -1,0 +1,28 @@
+{
+  "plan_id": "a3fc2d3d",
+  "operations": [
+    {
+      "op_id": "op_0",
+      "type": "delete",
+      "range_start": 63.46,
+      "range_end": 63.96,
+      "reason": "remove: filler words and filler sounds (uh, um, like, you know, etc.)",
+      "evidence_ref": "filler: 'so'",
+      "repairs": [
+        {
+          "type": "audio_crossfade",
+          "detail": "80ms crossfade"
+        },
+        {
+          "type": "room_tone_patch",
+          "detail": "applied 50ms room-tone patch to cut boundary"
+        }
+      ],
+      "depends_on": []
+    }
+  ],
+  "predicted_output_duration_s": 80.21,
+  "removal_ratio": 0.0074,
+  "clip_count": 2,
+  "rule_logs": []
+}

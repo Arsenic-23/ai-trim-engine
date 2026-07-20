@@ -1,0 +1,62 @@
+{
+  "intent_id": "a3f7c2d1-84b6-4e9a-b2f5-1c9d3e8f7a04",
+  "operations": [
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "visual"
+        ],
+        "query": "coffee-making shots",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.0
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and sounds (uh, um, like, you know)",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "No coffee-making shots were detected in this video. The video is a TEDx talk (Woody Roseland on attention spans) filmed in a theater/auditorium setting. There are no scenes, topics, or visual elements related to coffee or coffee-making in the video summary.",
+      "candidates": [
+        "visual:theater_stage — stage and presenter shots",
+        "visual:graphic_overlay — branded title cards and overlays",
+        "visual:auditorium — audience reaction shots"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "out_of_scope_reason": null
+}

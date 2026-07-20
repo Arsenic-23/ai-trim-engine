@@ -1,0 +1,26 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 14,
+  "prompt": "Remove every shot where Person B appears.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 23.86,
+  "reduction_pct": 70.5,
+  "removals": [
+    {
+      "start": 11.133,
+      "end": 68.0,
+      "reason": "remove: every shot where person:B appears; remove: filler words and verbal fillers; remove: filler words and verbal fillers",
+      "evidence_quote": "Wow What an audience, but if I'm being honest, I don't care what you think of my talk. I Don't..."
+    }
+  ],
+  "unsatisfied_ops": [],
+  "continuity_warnings": [
+    "Both hard removal operations are satisfied. Op 0: The entire segment containing person:B (the TED speaker, 11.1s–68.0s) has been removed. All kept segments are either branded title cards, wide audience reaction shots, or production credits — none of which contain person:B. Op 1: Filler words are contained within the removed speech segment (11.1s–68.0s); no spoken filler content is present in the kept transcript. Coherence is acceptable: the kept sequence flows logically as a branded intro → audience applause → outro, which is a valid shell structure for a talk where the speaker content has been intentionally excised. No orphaned references or broken context detected in the kept visual-only segments."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing"
+  ],
+  "critic_verdict_summary": "PASS",
+  "cost_usd": 1.5567192
+}

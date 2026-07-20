@@ -1,0 +1,26 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 10,
+  "prompt": "Keep only the interview.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.21,
+  "reduction_pct": 0.7,
+  "removals": [
+    {
+      "start": 63.46,
+      "end": 63.96,
+      "reason": "remove: filler words and sounds",
+      "evidence_quote": "so expensive?"
+    }
+  ],
+  "unsatisfied_ops": [],
+  "continuity_warnings": [
+    "Op 1 (hard): The single identified filler segment at 63.5s–64.0s has been removed. The kept transcript contains no residual 'um', 'uh', or equivalent filler sounds; 'Wow' at the opening is part of the speaker's deliberate rhetorical delivery rather than an involuntary filler sound and does not constitute a violation. Op 0 (soft): The source video contains no interview segment — it is a TEDx stage talk. The plan's chronological retention of the full talk content is an acceptable approximation of the soft keep_only intent given the absence of a true interview segment in the source material. Coherence is intact: the balloon joke setup at the end of the first clip leads directly into the 'Inflation' punchline in the second clip with only the filler gap removed, preserving comedic timing and narrative flow."
+  ],
+  "profile_preferences_applied": [
+    "remove_fillers",
+    "pacing:fast"
+  ],
+  "critic_verdict_summary": "PASS",
+  "cost_usd": 1.4212314
+}

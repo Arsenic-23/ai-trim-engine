@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "coherence_ok": true,
+  "notes": "The single filler word removal at 63.5s–64.0s has been applied. The kept transcript flows coherently from the setup ('Why are balloons') directly into the punchline ('expensive? Inflation') with no orphaned references or broken context. All intent requirements are satisfied."
+}

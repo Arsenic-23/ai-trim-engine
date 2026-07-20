@@ -1,0 +1,69 @@
+{
+  "intent_id": "a3f7c2e1-84b9-4d56-9e0f-31d7a5c8b249",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "story",
+          "speech",
+          "visual"
+        ],
+        "query": "interview segment",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.0
+    },
+    {
+      "action": "remove",
+      "target": {
+        "modality": [
+          "speech",
+          "audio"
+        ],
+        "query": "filler words and sounds",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": "chronological"
+  },
+  "ambiguities": [
+    {
+      "issue": "No 'interview' segment was found in this video. The content is a TEDx talk by a single speaker (person:B, Woody Roseland) on a theater stage with no interview format detected. Available segments include: intro, hook, setup, development, climax, payoff, and outro. Did you mean one of these, or a specific section of the talk (e.g., 'the main talk', 'everything except the title cards', or a specific topic)?",
+      "candidates": [
+        "full talk (hook through payoff, excluding title cards/credits)",
+        "intro (title card + audience reveal)",
+        "hook (Woody's opening provocation)",
+        "setup (attention span concept)",
+        "development (TED talk length joke)",
+        "climax (balloon/inflation punchline)",
+        "payoff (audience reaction)",
+        "outro (closing title card)"
+      ],
+      "blocking": false
+    }
+  ],
+  "profile_applied": [
+    "remove_fillers",
+    "pacing:fast"
+  ],
+  "out_of_scope_reason": null
+}

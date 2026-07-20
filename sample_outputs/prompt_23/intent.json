@@ -1,0 +1,38 @@
+{
+  "intent_id": "fast_fd48be23",
+  "operations": [
+    {
+      "action": "compress",
+      "target": {
+        "modality": [
+          "audio",
+          "visual"
+        ],
+        "query": "beat-aligned highlights",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "soft",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": true,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": "beat_cut",
+    "narrative_shape": null,
+    "ordering": null
+  },
+  "ambiguities": [],
+  "profile_applied": [
+    "beat_cut"
+  ],
+  "out_of_scope_reason": null
+}

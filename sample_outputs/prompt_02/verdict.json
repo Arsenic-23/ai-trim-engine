@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Output duration (31.6s) exceeds maximum target limit (30.0s)",
+      "leftover_segments": null,
+      "route": "story"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "The plan satisfies the compress 'important moments' intent by retaining the key narrative beats: the opening hook ('Wow what an audience'), the attention span declaration, the TED talk setup, and the balloon/inflation punchline with audience reaction. Removed segments are contextual filler, intro title cards, and transitional material that do not constitute important moments. The kept sequence flows coherently from hook → setup → development → climax → payoff, preserving the comedic throughline and narrative arc. No orphaned references or broken context detected."
+}

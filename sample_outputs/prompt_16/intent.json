@@ -1,0 +1,39 @@
+{
+  "intent_id": "fast_e42a6a64",
+  "operations": [
+    {
+      "action": "keep_only",
+      "target": {
+        "modality": [
+          "object",
+          "visual"
+        ],
+        "query": "product visible",
+        "graph_pattern": null,
+        "negation": false
+      },
+      "priority": "hard",
+      "confidence": 0.95
+    }
+  ],
+  "constraints": {
+    "target_duration_s": null,
+    "duration_mode": null,
+    "platform": null,
+    "aspect_ratio": null,
+    "preserve_story": false,
+    "preserve_speech_integrity": true
+  },
+  "style": {
+    "pacing": "fast",
+    "cut_style": null,
+    "narrative_shape": null,
+    "ordering": null
+  },
+  "ambiguities": [],
+  "profile_applied": [
+    "product_focus",
+    "profile_pacing"
+  ],
+  "out_of_scope_reason": null
+}

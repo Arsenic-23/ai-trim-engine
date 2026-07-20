@@ -1,0 +1,64 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 5,
+  "prompt": "Remove pauses and silences.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 40.58,
+  "reduction_pct": 49.8,
+  "removals": [
+    {
+      "start": 0.0,
+      "end": 14.25,
+      "reason": "remove: silence",
+      "evidence_quote": "Wow What an audience,"
+    },
+    {
+      "start": 17.060000000000002,
+      "end": 18.85,
+      "reason": "remove: silence",
+      "evidence_quote": "talk. I Don't"
+    },
+    {
+      "start": 20.8,
+      "end": 21.84,
+      "reason": "remove: silence",
+      "evidence_quote": "talk Because"
+    },
+    {
+      "start": 33.26,
+      "end": 36.26,
+      "reason": "remove: silence",
+      "evidence_quote": "Facebook Thanks for the click You"
+    },
+    {
+      "start": 44.5,
+      "end": 46.36,
+      "reason": "remove: silence",
+      "evidence_quote": "They're dead I'm"
+    },
+    {
+      "start": 54.5,
+      "end": 55.55,
+      "reason": "remove: silence",
+      "evidence_quote": "keep it quick."
+    },
+    {
+      "start": 63.96,
+      "end": 80.805442,
+      "reason": "remove: silence",
+      "evidence_quote": "so expensive? Inflation"
+    }
+  ],
+  "unsatisfied_ops": [
+    "Op 0: Leftover matching content found in kept ranges: [28.2s–28.8s]; [41.6s–42.4s]"
+  ],
+  "continuity_warnings": [
+    "All silence segments have been removed as requested. The kept transcript flows coherently: the talk opens mid-sentence with the provocative hook about not caring what the live audience thinks, transitions to caring about internet viewers, then moves to attention spans being dead, jokes about TED talk length, and ends on the balloon punchline setup. The chronological order is maintained and the narrative through-line is intact."
+  ],
+  "profile_preferences_applied": [
+    "default_silence",
+    "profile_pacing"
+  ],
+  "critic_verdict_summary": "FAIL: 1 issues",
+  "cost_usd": 1.2260811
+}

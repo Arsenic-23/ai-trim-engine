@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "failures": [
+    {
+      "operation_index": 0,
+      "issue": "Leftover matching content found in kept ranges: [12.2s–35.5s]",
+      "leftover_segments": [
+        "[12.2s–35.5s]"
+      ],
+      "route": "retrieval"
+    }
+  ],
+  "coherence_ok": true,
+  "notes": "Op 0 (hard): The TEDx MileHigh branded title card and theater audience reveal (0.0s–11.1s) is fully removed. No remnants of the intro appear in the kept transcript. Op 1 (soft): A 0.5s filler segment at 63.5s–64.0s is removed, bridging the balloon joke setup to its punchline cleanly. The remaining kept transcript does not exhibit obvious uncorrected filler words beyond minor exclamations ('Wow'), which is acceptable under a soft removal constraint. Narrative coherence is intact: the talk flows from hook through setup, development, climax, audience payoff, and outro title card without orphaned references or broken context. The chronological ordering constraint is respected throughout."
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "coherence_ok": true,
+  "notes": "Op 0 requests a soft restructure of trailer story beats. The system constraint explicitly prohibits failing plans for not reordering clips, and chronological approximations must be accepted. The kept transcript preserves the full 80.8s video with all story beats intact (intro, hook, setup, development, climax, payoff, outro) in their original chronological order. No explicit removals were requested and none are missing. The plan satisfies the intent within the system's chronological constraints."
+}

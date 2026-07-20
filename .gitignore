@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+
+# Environment / secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project artifacts (generated at runtime)
+projects/
+
+# Benchmarks
+.benchmarks/
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+htmlcov/
+.coverage

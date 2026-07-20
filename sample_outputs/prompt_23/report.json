@@ -1,0 +1,25 @@
+{
+  "video_id": "0d0196476423bb0e",
+  "version": 23,
+  "prompt": "Cut on every beat.",
+  "duration_before_s": 80.805442,
+  "duration_after_s": 80.71,
+  "reduction_pct": 0.1,
+  "removals": [
+    {
+      "start": 80.733,
+      "end": 80.805442,
+      "reason": "keep_only: not matching 'beat-aligned highlights'",
+      "evidence_quote": null
+    }
+  ],
+  "unsatisfied_ops": [],
+  "continuity_warnings": [
+    "The intent is a soft 'compress beat-aligned highlights' operation. The video is 80.8s total and only 0.1s (80.7s–80.8s) was removed — a trivially small tail trim. Given the soft compression intent and the extremely short source material (under 81 seconds) with no clear beat-aligned highlight candidates identifiable beyond keeping the full coherent talk, this is an acceptable chronological approximation. The kept transcript is fully coherent: intro, hook, setup, development, climax, and payoff all remain intact with no orphaned references or broken context."
+  ],
+  "profile_preferences_applied": [
+    "beat_cut"
+  ],
+  "critic_verdict_summary": "PASS",
+  "cost_usd": 2.0665491
+}

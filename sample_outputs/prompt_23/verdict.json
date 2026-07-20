@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "failures": [],
+  "coherence_ok": true,
+  "notes": "The intent is a soft 'compress beat-aligned highlights' operation. The video is 80.8s total and only 0.1s (80.7s–80.8s) was removed — a trivially small tail trim. Given the soft compression intent and the extremely short source material (under 81 seconds) with no clear beat-aligned highlight candidates identifiable beyond keeping the full coherent talk, this is an acceptable chronological approximation. The kept transcript is fully coherent: intro, hook, setup, development, climax, and payoff all remain intact with no orphaned references or broken context."
+}
